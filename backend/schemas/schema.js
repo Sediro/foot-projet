@@ -1,20 +1,28 @@
 const { gql } = require("apollo-server-express");
 
-const { accountTypeDef, accountQueries, accountMutations } = require("./resources/account")
-const { authentificationTypeDef, authentificationQueries, authentificationMutations } = require("./resources/authentification");
+const { playerTypeDef, playerQueries, playerMutations } = require("./resources/player")
+const { refereeTypeDef, refereeQueries, refereeMutations } = require("./resources/referee");
+const { teamTypeDef, teamQueries, teamMutations } = require("./resources/team");
+const { matchTypeDef, matchQueries, matchMutations } = require("./resources/match");
 
 const typeDefs = gql`
-    ${accountTypeDef}
-    ${authentificationTypeDef}
+    ${playerTypeDef}
+    ${refereeTypeDef}
+    ${teamTypeDef}
+    ${matchTypeDef}
 
     type Query {
-      ${accountQueries}
-      ${authentificationQueries}
+      ${playerQueries}
+      ${refereeQueries}
+      ${teamQueries}
+      ${matchQueries}
     }
 
     type Mutation {
-      ${accountMutations}
-      ${authentificationMutations}
+      ${playerMutations}
+      ${refereeMutations}
+      ${teamMutations}
+      ${matchMutations}
     }
 `;
 
