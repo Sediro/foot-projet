@@ -2,7 +2,7 @@ const bcrypt = require("bcrypt");
 const jsonwebtoken = require("jsonwebtoken");
 const jwt = require("jsonwebtoken");
 
-const Player = require("../models/account");
+const Player = require("../models/player");
 const {
   AuthenticationError,
   ForbiddenError,
